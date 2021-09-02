@@ -46,4 +46,11 @@ class FujianService
         curl_close($ch);
         return $output;
     }
+
+
 }
+
+$cls = new FujianService();
+$result = $cls->getOrgToken();
+var_dump($result);
+file_put_contents("fujian.log", $result);
